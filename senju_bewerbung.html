@@ -1,0 +1,380 @@
+<title>Omars Senju-Bewerbung</title>
+<style>
+  :root{
+    --bg: #f4ecd8;
+    --bg-2: #ece0c4;
+    --ink: #23301f;
+    --ink-soft: #4a5c3e;
+    --wood: #5c3d24;
+    --wood-dark: #3e2815;
+    --leaf: #3f6b3f;
+    --leaf-deep: #294d2c;
+    --leaf-light: #7fa563;
+    --gold: #b98a2c;
+    --gold-soft: #e3c988;
+    --card: #fbf6e8;
+    --line: rgba(60,45,20,0.18);
+    --shadow: rgba(40,30,10,0.25);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #141b12;
+      --bg-2: #182018;
+      --ink: #e9e6d8;
+      --ink-soft: #b9c4ac;
+      --wood: #caa06a;
+      --wood-dark: #e9d3a8;
+      --leaf: #7fa563;
+      --leaf-deep: #a9c98e;
+      --leaf-light: #5c8a4e;
+      --gold: #e3c163;
+      --gold-soft: #f2dfa0;
+      --card: #1d251b;
+      --line: rgba(230,220,190,0.15);
+      --shadow: rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #141b12;
+    --bg-2: #182018;
+    --ink: #e9e6d8;
+    --ink-soft: #b9c4ac;
+    --wood: #caa06a;
+    --wood-dark: #e9d3a8;
+    --leaf: #7fa563;
+    --leaf-deep: #a9c98e;
+    --leaf-light: #5c8a4e;
+    --gold: #e3c163;
+    --gold-soft: #f2dfa0;
+    --card: #1d251b;
+    --line: rgba(230,220,190,0.15);
+    --shadow: rgba(0,0,0,0.5);
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Serif+JP:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 600px at 15% -10%, color-mix(in srgb, var(--leaf) 16%, transparent), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, color-mix(in srgb, var(--gold) 14%, transparent), transparent 55%),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New', 'Noto Sans', sans-serif;
+    padding-inline:20px;
+    padding-block:56px;
+    line-height:1.65;
+  }
+  .wrap{max-width:760px; margin:0 auto;}
+
+  h1,h2,.eyebrow{font-family:'Shippori Mincho', 'Noto Serif JP', serif;}
+
+  /* ---- Hero ---- */
+  .hero{
+    position:relative;
+    text-align:center;
+    padding-block:52px 40px;
+    margin-bottom:38px;
+  }
+  .seal{
+    width:86px; height:86px;
+    margin:0 auto 22px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, var(--leaf-light), var(--leaf) 55%, var(--leaf-deep) 100%);
+    box-shadow: 0 6px 18px var(--shadow), inset 0 0 0 3px color-mix(in srgb, var(--gold) 70%, transparent);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .seal svg{width:44px; height:44px; display:block;}
+  .eyebrow{
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    font-size:.78rem;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:clamp(2.1rem, 6vw, 3.1rem);
+    font-weight:800;
+    margin:0 0 10px;
+    color:var(--ink);
+    text-wrap:balance;
+  }
+  .hero-sub{
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    max-width:46ch;
+    margin:0 auto;
+  }
+  .hero-line{
+    width:120px; height:2px;
+    margin:26px auto 0;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  /* ---- Section shell ---- */
+  section{margin-bottom:30px;}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px 26px;
+    box-shadow:0 10px 28px -18px var(--shadow);
+  }
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:16px;
+  }
+  .sec-num{
+    font-family:'Shippori Mincho', serif;
+    color:var(--gold);
+    font-weight:700;
+    font-size:.95rem;
+  }
+  h2{
+    font-size:1.35rem;
+    font-weight:700;
+    margin:0;
+    color:var(--ink);
+  }
+
+  /* ---- Steckbrief grid ---- */
+  .steckbrief{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:14px 22px;
+  }
+  .fact{
+    padding-bottom:10px;
+    border-bottom:1px dashed var(--line);
+  }
+  .fact-label{
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:var(--leaf);
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .fact-value{font-size:1rem; color:var(--ink);}
+  @media (max-width:480px){
+    .steckbrief{grid-template-columns:1fr;}
+  }
+
+  p{margin:0 0 12px; color:var(--ink);}
+  p:last-child{margin-bottom:0;}
+
+  .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .tag{
+    font-size:.78rem;
+    padding:5px 12px;
+    border-radius:999px;
+    background:color-mix(in srgb, var(--leaf) 14%, var(--card));
+    color:var(--leaf-deep);
+    border:1px solid color-mix(in srgb, var(--leaf) 30%, transparent);
+    font-weight:600;
+  }
+  :root[data-theme="dark"] .tag, @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tag{color:var(--leaf-deep);} }
+
+  /* ---- divider ---- */
+  .branch-divider{
+    display:flex; align-items:center; gap:14px;
+    margin:34px 0;
+    color:var(--gold);
+  }
+  .branch-divider::before, .branch-divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:linear-gradient(90deg, transparent, var(--line));
+  }
+  .branch-divider::after{background:linear-gradient(90deg, var(--line), transparent);}
+  .branch-divider svg{width:22px; height:22px; flex:none;}
+
+  /* ---- closing statement ---- */
+  .closing{
+    text-align:center;
+    padding:34px 20px 6px;
+  }
+  .closing h2{
+    font-size:1.5rem;
+    margin-bottom:14px;
+  }
+  .closing p{
+    max-width:50ch;
+    margin-inline:auto;
+    color:var(--ink-soft);
+  }
+  .signature{
+    margin-top:26px;
+    font-family:'Shippori Mincho', serif;
+    font-size:1.3rem;
+    color:var(--leaf-deep);
+  }
+  .signature span{
+    display:block;
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    font-size:.75rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:6px;
+  }
+
+  footer{
+    text-align:center;
+    margin-top:44px;
+    font-size:.78rem;
+    color:var(--ink-soft);
+    opacity:.75;
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .card, .hero{
+      animation: rise .7s ease both;
+    }
+    section:nth-of-type(2) .card{animation-delay:.05s;}
+    section:nth-of-type(3) .card{animation-delay:.1s;}
+    section:nth-of-type(4) .card{animation-delay:.15s;}
+    section:nth-of-type(5) .card{animation-delay:.2s;}
+  }
+  @keyframes rise{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+</style>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="seal">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 3 C12 9 8 9 8 14 C8 18 10 21 12 21 C14 21 16 18 16 14 C16 9 12 9 12 3 Z" fill="var(--gold-soft)" opacity="0.9"/>
+        <path d="M12 6 L12 21" stroke="var(--leaf-deep)" stroke-width="1" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="eyebrow">Konoha · Senju Clan</div>
+    <h1>Bewerbung von Omar</h1>
+    <p class="hero-sub">Für die Aufnahme in den Senju Clan — Wald, Wurzeln und Wachstum.</p>
+    <div class="hero-line"></div>
+  </div>
+
+  <section>
+    <div class="card">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <h2>Steckbrief</h2>
+      </div>
+      <div class="steckbrief">
+        <div class="fact">
+          <div class="fact-label">Name</div>
+          <div class="fact-value">Omar</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Alter</div>
+          <div class="fact-value">14 Jahre</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Clan-Wunsch</div>
+          <div class="fact-value">Senju Clan</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Herkunft</div>
+          <div class="fact-value">Kleines Dorf am Waldrand, nahe Konoha</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="branch-divider">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="var(--leaf)"/><circle cx="12" cy="12" r="9" stroke="var(--leaf)" stroke-width="1" opacity="0.4"/></svg>
+  </div>
+
+  <section>
+    <div class="card">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h2>Aussehen</h2>
+      </div>
+      <p>Omar hat wilde, braune Haare, die immer etwas zerzaust sind, so wie Äste im Wind. Seine Augen sind moosgrün und leuchten besonders hell, wenn er in der Nähe von Bäumen ist. Er trägt einfache, dunkelgrüne und braune Kleidung, die an Waldfarben erinnert, dazu eine kleine Halskette mit einem Holzanhänger in Form eines Blattes — ein Geschenk aus seinem Heimatdorf.</p>
+      <p>Er ist für sein Alter schlank und schnell, mit leicht sonnengebräunter Haut vom vielen Draußensein.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <h2>Charakter</h2>
+      </div>
+      <p>Omar ist ruhig, aber nicht schüchtern. Er denkt erst nach, bevor er handelt, und beobachtet seine Umgebung genau. Wenn es aber um seine Freunde geht, wird er mutig und stellt sich auch vor stärkere Gegner. Er ist neugierig und lernt gerne Neues, besonders über die Natur und alte Jutsu-Techniken. Manchmal ist er etwas stur, wenn er sich eine Meinung gebildet hat.</p>
+      <div class="tag-row">
+        <span class="tag">ruhig</span>
+        <span class="tag">mutig für Freunde</span>
+        <span class="tag">neugierig</span>
+        <span class="tag">naturverbunden</span>
+        <span class="tag">manchmal stur</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="branch-divider">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="var(--leaf)"/><circle cx="12" cy="12" r="9" stroke="var(--leaf)" stroke-width="1" opacity="0.4"/></svg>
+  </div>
+
+  <section>
+    <div class="card">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <h2>Vorgeschichte</h2>
+      </div>
+      <p>Omar wuchs in einem kleinen Dorf am Rand eines großen Waldes auf, nicht weit von Konoha entfernt. Seine Eltern waren einfache Bauern, aber Omar verbrachte seine ganze Kindheit lieber zwischen den Bäumen als auf dem Feld. Schon früh bemerkte er, dass Pflanzen in seiner Nähe schneller wuchsen und dass er ein besonderes Gefühl für Chakra in der Natur hatte.</p>
+      <p>Eines Tages kam ein reisender Shinobi durch das Dorf und sah, wie Omar mit bloßen Händen einen kleinen, verdorrten Baum wieder zum Leben erweckte. Der Shinobi erkannte sein Talent für Mokuton und riet ihm, sein Glück beim Senju Clan zu versuchen. Seitdem trainiert Omar hart und träumt davon, eines Tages ein starker Beschützer zu werden — so wie die Senju es schon immer waren.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <div class="sec-head">
+        <span class="sec-num">05</span>
+        <h2>Fähigkeiten</h2>
+      </div>
+      <p>Omar beherrscht die Grundlagen im Taijutsu und ist sehr schnell auf den Beinen. Sein größtes Talent liegt aber in seiner besonderen Verbindung zur Natur: Er kann sein Chakra spüren, um Pflanzen wachsen zu lassen, und hofft, im Senju Clan das echte Mokuton (Holz-Element) zu erlernen. Er kämpft nicht gerne als Erstes — lieber beschützt er andere, heilt und baut wieder auf.</p>
+      <div class="tag-row">
+        <span class="tag">Taijutsu-Grundlagen</span>
+        <span class="tag">gutes Chakra-Gefühl</span>
+        <span class="tag">schnell</span>
+        <span class="tag">Wunsch: Mokuton</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="branch-divider">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="var(--leaf)"/><circle cx="12" cy="12" r="9" stroke="var(--leaf)" stroke-width="1" opacity="0.4"/></svg>
+  </div>
+
+  <section>
+    <div class="card">
+      <div class="sec-head">
+        <span class="sec-num">06</span>
+        <h2>Warum der Senju Clan?</h2>
+      </div>
+      <p>Omar fühlt sich mit Wäldern und Bäumen tief verbunden — genauso wie der Senju Clan für sein Holz-Element und seine Nähe zur Natur bekannt ist. Er bewundert, dass die Senju nicht nur stark im Kampf sind, sondern auch beschützen und heilen können. Genau das möchte Omar auch werden: stark genug, um für seine Freunde da zu sein, aber mit einem Herz, das der Natur nahesteht.</p>
+    </div>
+  </section>
+
+  <div class="closing">
+    <h2>Ich hoffe auf eure Aufnahme.</h2>
+    <p>Ich werde hart trainieren, dem Clan treu sein und meine Fähigkeiten mit Stolz einsetzen — für Konoha und für den Senju Clan.</p>
+    <div class="signature">
+      Omar
+      <span>Bewerber · Senju Clan</span>
+    </div>
+  </div>
+
+  <footer>Bewerbung für den Naruto-RP-Server</footer>
+
+</div>
